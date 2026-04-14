@@ -10,19 +10,19 @@
 
   tasks:
 
-  - name: Visa ett meddelande
+    - name: Visa ett meddelande
 
-  debug:
+      debug:
 
-  msg: "Ansible kör från kontrollnoden!"
+      msg: "Ansible kör från kontrollnoden!"
 
 
-  - name: Visa en variabel
+    - name: Visa en variabel
 
-  debug:
+      debug:
 
-  msg: "Miljö: {{ environment }}"
+      msg: "Miljö: {{ environment }}"
 
-  vars:
+      vars:
 
-  environment: "lab"
+      environment: "lab"
