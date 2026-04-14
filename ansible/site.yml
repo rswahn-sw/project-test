@@ -1,28 +1,16 @@
 # ansible/site.yml
 
 ---
-
 - name: Test playbook
-
   hosts: localhost
-
   connection: local
-
+  vars:
+    app_environment: "lab"
   tasks:
-
     - name: Visa ett meddelande
-
       debug:
-
-      msg: "Ansible kör från kontrollnoden!"
-
-
+        msg: "Ansible kör från kontrollnoden!"
+ 
     - name: Visa en variabel
-
       debug:
-
-      msg: "Miljö: {{ environment }}"
-
-      vars:
-
-      environment: "lab"
+        msg: "Miljö: {{ app_environment }}"
